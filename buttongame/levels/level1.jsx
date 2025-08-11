@@ -25,6 +25,16 @@ const changePhrase = () =>{
     setPhrase("I knew you'd press that one.")
 }
 
+useEffect(() => {
+    if (phrase === "I knew you'd press that one.") {
+        const buttonContainer = document.getElementById('buttonContainer')
+      const newButton = document.createElement("button");
+      newButton.textContent = "Surprise Button";
+      newButton.setAttribute("id", "surprise-btn");
+      buttonContainer.appendChild(newButton);
+    }
+  }, [phrase]);
+
 
 
 
